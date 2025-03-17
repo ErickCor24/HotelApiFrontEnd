@@ -1,4 +1,4 @@
-import { Aside, About, Home, Customer, FormCustomer, NotFound, CustomerList } from "./components/index.ts"
+import { Aside, About, Home, Customer, FormCustomer, NotFound, CustomerList, UpdateCustomer } from "./components/index.ts"
 import { Routes, Route } from "react-router-dom"
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
             <Route path="customer" element={<Customer />}>
               <Route index element={<CustomerList />}></Route>
               <Route path="new-customer" element={<FormCustomer />}></Route>
+              <Route path="update-customer/:id" element={<UpdateCustomer />}></Route>
             </Route>
 
             <Route path="about" element={<About />}></Route>

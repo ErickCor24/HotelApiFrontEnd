@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useFetch } from "../hooks";
 import { OrbitProgress } from "react-loading-indicators";
 import { Error } from "../ui";
+import { Link } from "react-router-dom";
 
 interface PropsCustomerInfo {
     idCustomer: number;
@@ -51,6 +52,7 @@ export const CustomerList = () => {
                         <th scope="col" className="px-6 py-3">Email</th>
                         <th scope="col" className="px-6 py-3">CI</th>
                         <th scope="col" className="px-6 py-3">Age</th>
+                        <th scope="col" className="px-6 py-3 text-principal-700">Edit</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,6 +64,7 @@ export const CustomerList = () => {
                             <td className="px-6 py-2">{customer.email}</td>
                             <td className="px-6 py-2">{customer.ci || "N/A"}</td>
                             <td className="px-6 py-2">{customer.age || "Unknown"}</td>
+                            <td className="px-6 py-2"> <Link className="py-2 px-4 bg-principal-600 text-principal-50 rounded" to={`./update-customer/${customer.idCustomer}`}>Edit</Link></td>
                         </tr>
                     ))}
                 </tbody>
