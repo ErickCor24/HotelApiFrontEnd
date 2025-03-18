@@ -80,7 +80,7 @@ export const UpdateCustomer = () => {
     return (
         <>
             <>
-                <h2 className="text-2xl text-principal-700 mb-4 font-medium">Register new customer</h2>
+                <h2 className="text-2xl text-principal-700 mb-4 font-medium">Update customer, {data?.data.name} {data?.data.lastName}</h2>
                 {error && <p className="text-red-500 text-sm">Error: An error has ocurred</p>}
                 <form onSubmit={handleSubmit} method="POST" className="w-2/4 flex flex-col gap-4">
                     <div>

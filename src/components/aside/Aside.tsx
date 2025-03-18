@@ -12,6 +12,17 @@ const optionsCustomer = [
     }
 ]
 
+const optionsRooms = [
+    {
+        value: 'View Rooms',
+        link: '/rooms'
+    },
+    {
+        value: 'Add Rooms',
+        link: '/rooms/new-room'
+    }
+]
+
 export const Aside = () => {
 
 
@@ -25,8 +36,7 @@ export const Aside = () => {
             </div>
             <div className="flex flex-col h-full text-[1.1rem] w-full justify-center gap-2">
                 <AsideDropDown label="Customer" options={optionsCustomer}></AsideDropDown>
-                <AsideDropDown label="Customer" options={optionsCustomer}></AsideDropDown>
-                <AsideDropDown label="Customer" options={optionsCustomer}></AsideDropDown>
+                <AsideDropDown label="Rooms" options={optionsRooms}></AsideDropDown>
             </div>
         </aside>
     )

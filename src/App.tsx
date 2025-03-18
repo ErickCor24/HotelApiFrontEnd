@@ -1,4 +1,4 @@
-import { Aside, About, Home, Customer, FormCustomer, NotFound, CustomerList, UpdateCustomer } from "./components/index.ts"
+import { Aside, About, Home, Customer, FormCustomer, NotFound, CustomerList, UpdateCustomer, Rooms, RoomsList } from "./components/index.ts"
 import { Routes, Route } from "react-router-dom"
 function App() {
 
@@ -15,11 +15,14 @@ function App() {
               <Route path="new-customer" element={<FormCustomer />}></Route>
               <Route path="update-customer/:id" element={<UpdateCustomer />}></Route>
             </Route>
+            <Route path="rooms" element={<Rooms />}>
+              <Route index element={<RoomsList />}></Route>
+            </Route>
 
             <Route path="about" element={<About />}></Route>
 
             <Route path="*" element={<NotFound />}></Route>
-            
+
           </Routes>
         </section>
       </main>
