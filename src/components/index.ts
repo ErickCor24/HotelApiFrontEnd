@@ -11,6 +11,8 @@ export * from './customer/CustomerList.tsx';
 //Rooms
 export * from './rooms/Rooms.tsx';
 export * from './rooms/RoomsList.tsx';
+export * from './rooms/AddRoom.tsx';
+
 
 //Page
 export * from './page/NotFound.tsx';
